@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — QuizMaster Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/design-system.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/pages/auth.css" />
+</head>
+<body>
+<div class="auth-layout">
+
+  <!-- ══ Left Branding Panel ══════════════════════════════════════ -->
+  <aside class="auth-brand">
+    <div class="auth-brand__bg-glow"></div>
+    <div class="auth-brand__bg-glow-bottom"></div>
+
+    <a href="/" class="auth-brand__logo">
+      <div class="auth-brand__logo-icon">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.5">
+          <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+          <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+        </svg>
+      </div>
+      <span class="auth-brand__logo-text">QuizMaster<span class="auth-brand__logo-accent">Pro</span></span>
+    </a>
+
+    <div class="auth-brand__main">
+      <h2 class="auth-brand__tagline">
+        Welcome<br>back to<br>
+        <span class="auth-brand__tagline-accent">smarter learning.</span>
+      </h2>
+      <p class="auth-brand__desc">
+        Your AI-powered study advisor and personalised quiz platform is waiting. Pick up right where you left off.
+      </p>
+      <div class="auth-brand__features">
+        <div class="auth-brand__feature">
+          <div class="auth-brand__feature-icon">⚡</div>
+          <span class="auth-brand__feature-text">Instant automated grading in under 3 seconds</span>
+        </div>
+        <div class="auth-brand__feature">
+          <div class="auth-brand__feature-icon">🤖</div>
+          <span class="auth-brand__feature-text">AI study plan updated after every quiz</span>
+        </div>
+        <div class="auth-brand__feature">
+          <div class="auth-brand__feature-icon">🏆</div>
+          <span class="auth-brand__feature-text">Track streaks, earn badges, climb leaderboards</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-brand__footer">
+      © 2026 QuizMaster Pro · CT25A421
+    </div>
+  </aside>
+
+  <!-- ══ Right Form Panel ═════════════════════════════════════════ -->
+  <main class="auth-form-panel">
+    <div class="auth-form-container">
+
+      <div class="auth-form-header">
+        <h1 class="auth-form-title">Sign in to your account</h1>
+        <p class="auth-form-subtitle">
+          Don't have an account?
+          <a href="/auth/register.html">Create one free →</a>
+        </p>
+      </div>
+
+      <!-- Alert area -->
+      <div id="alertBox" class="auth-alert hidden" role="alert"></div>
+
+      <!-- Form -->
+      <form class="auth-form" id="loginForm" novalidate>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email address</label>
+          <div class="form-input-wrapper">
+            <span class="form-input-icon">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </span>
+            <input
+              class="form-input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <span class="form-error hidden" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <div class="form-input-wrapper">
+            <span class="form-input-icon">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0110 0v4"/>
+              </svg>
+            </span>
+            <input
+              class="form-input"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Your password"
+              autocomplete="current-password"
+              required
+            />
+            <button type="button" class="form-input-toggle" id="togglePassword" aria-label="Toggle password visibility">
+              <svg id="eyeIcon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <span class="form-error hidden" id="passwordError"></span>
+        </div>
+
+        <div class="auth-form-footer">
+          <label class="checkbox-row">
+            <input type="checkbox" id="rememberMe" />
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--full btn--lg" id="submitBtn">
+          <span class="btn-text">Sign In</span>
+        </button>
+
+      </form>
+
+      <div class="auth-divider">
+        <div class="divider">or sign in as</div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: var(--sp-3);">
+        <button type="button" class="btn btn--outline" onclick="demoLogin('student')">
+          🎓 Demo Student
+        </button>
+        <button type="button" class="btn btn--outline" onclick="demoLogin('teacher')">
+          📚 Demo Teacher
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+
+<script type="module">
+  import { api } from '/js/api.js';
+  import { saveAuth, redirectByRole } from '/js/auth.js';
+
+  const form       = document.getElementById('loginForm');
+  const submitBtn  = document.getElementById('submitBtn');
+  const alertBox   = document.getElementById('alertBox');
+  const toggleBtn  = document.getElementById('togglePassword');
+  const passInput  = document.getElementById('password');
+  const eyeIcon    = document.getElementById('eyeIcon');
+
+  // Redirect if already logged in
+  const token = localStorage.getItem('qm_token');
+  if (token) redirectByRole(JSON.parse(atob(token.split('.')[1])).role);
+
+  // Toggle password visibility
+  toggleBtn.addEventListener('click', () => {
+    const isHidden = passInput.type === 'password';
+    passInput.type = isHidden ? 'text' : 'password';
+    eyeIcon.innerHTML = isHidden
+      ? '<path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>'
+      : '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>';
+  });
+
+  function showAlert(message, type = 'error') {
+    alertBox.className = `auth-alert auth-alert--${type}`;
+    alertBox.innerHTML = `<span>${type === 'error' ? '⚠️' : '✅'}</span> ${message}`;
+  }
+
+  function setLoading(loading) {
+    submitBtn.classList.toggle('btn--loading', loading);
+    submitBtn.disabled = loading;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const email    = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+
+    // Basic client validation
+    let valid = true;
+    if (!email) {
+      document.getElementById('emailError').textContent = 'Email is required';
+      document.getElementById('emailError').classList.remove('hidden');
+      document.getElementById('email').classList.add('form-input--error');
+      valid = false;
+    } else {
+      document.getElementById('emailError').classList.add('hidden');
+      document.getElementById('email').classList.remove('form-input--error');
+    }
+    if (!password) {
+      document.getElementById('passwordError').textContent = 'Password is required';
+      document.getElementById('passwordError').classList.remove('hidden');
+      document.getElementById('password').classList.add('form-input--error');
+      valid = false;
+    } else {
+      document.getElementById('passwordError').classList.add('hidden');
+      document.getElementById('password').classList.remove('form-input--error');
+    }
+    if (!valid) return;
+
+    setLoading(true);
+
+    try {
+      const data = await api.post('/api/auth/login', { email, password });
+      saveAuth(data.token, data.user);
+      showAlert('Login successful! Redirecting...', 'success');
+      setTimeout(() => redirectByRole(data.user.role), 800);
+    } catch (err) {
+      showAlert(err.message || 'Invalid email or password.');
+    } finally {
+      setLoading(false);
+    }
+  });
+
+  // Demo login helper (defined globally so onclick works)
+  window.demoLogin = async (role) => {
+    const creds = {
+      student: { email: 'demo.student@quizmaster.com', password: 'Demo1234' },
+      teacher: { email: 'demo.teacher@quizmaster.com', password: 'Demo1234' },
+    };
+    document.getElementById('email').value    = creds[role].email;
+    document.getElementById('password').value = creds[role].password;
+    form.dispatchEvent(new Event('submit'));
+  };
+</script>
+</body>
+</html>

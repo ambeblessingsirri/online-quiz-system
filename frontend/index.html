@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuizMaster Pro — AI-Powered Learning Platform</title>
+  <meta name="description" content="Take quizzes, get instant AI-powered feedback, and a personalised study plan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/design-system.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/pages/landing.css" />
+</head>
+<body>
+
+<!-- ══════════════════════ NAVIGATION ══════════════════════════ -->
+<nav class="nav nav--landing" id="navbar">
+  <div class="nav__container container">
+    <a href="/" class="nav__logo">
+      <div class="nav__logo-icon">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.5">
+          <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+          <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+        </svg>
+      </div>
+      <span class="nav__logo-text">QuizMaster<span class="nav__logo-accent">Pro</span></span>
+    </a>
+    <div class="nav__links">
+      <a href="#features"     class="nav__link">Features</a>
+      <a href="#how-it-works" class="nav__link">How It Works</a>
+      <a href="#ai"           class="nav__link">AI Engine</a>
+    </div>
+    <div class="nav__actions">
+      <a href="/auth/login.html"    class="btn btn--outline-white btn--sm">Sign In</a>
+      <a href="/auth/register.html" class="btn btn--primary   btn--sm">Get Started Free</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════ HERO ════════════════════════════════ -->
+<section class="hero">
+  <div class="hero__bg-grid"></div>
+  <div class="hero__bg-glow"></div>
+  <div class="hero__bg-glow-left"></div>
+
+  <div class="hero__container container">
+    <div class="hero__content animate-fadeInUp">
+      <div class="hero__pill">
+        <span class="hero__pill-dot"></span>
+        AI-Powered Learning Platform
+      </div>
+      <h1 class="hero__title">
+        Smarter Quizzes.<br>
+        Faster Grades.<br>
+        <span class="hero__title-accent">Real Results.</span>
+      </h1>
+      <p class="hero__subtitle">
+        Take quizzes across any subject, receive your grade in under 3 seconds,
+        and let AI build a personalised study plan that targets your exact weaknesses.
+      </p>
+      <div class="hero__actions">
+        <a href="/auth/register.html" class="btn btn--primary btn--xl hero__cta-primary">
+          Start Learning Free
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/auth/login.html?role=teacher" class="btn btn--outline-white btn--xl">
+          I'm a Teacher →
+        </a>
+      </div>
+      <div class="hero__trust">
+        <div class="hero__trust-avatars">
+          <div class="hero__trust-avatar">AM</div>
+          <div class="hero__trust-avatar">JK</div>
+          <div class="hero__trust-avatar">LF</div>
+          <div class="hero__trust-avatar">RM</div>
+          <div class="hero__trust-avatar">EO</div>
+        </div>
+        <span>Trusted by <strong style="color:#fff">2,400+ students</strong> this semester</span>
+      </div>
+    </div>
+
+    <div class="hero__visual animate-fadeInUp delay-300">
+      <div class="hero__mockup">
+        <!-- Floating score badge -->
+        <div class="mockup-score-card">
+          <div class="mockup-score">85%</div>
+          <div class="mockup-score-label">Your Score</div>
+          <div class="mockup-score-grade">B+</div>
+        </div>
+
+        <!-- Main quiz card -->
+        <div class="mockup-quiz-card">
+          <div class="mockup-quiz-card__header">
+            <span class="mockup-subject">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
+              Mathematics
+            </span>
+            <div class="mockup-timer">
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+              </svg>
+              2:45
+            </div>
+          </div>
+          <div class="mockup-quiz-card__question">
+            What is the derivative of f(x) = x² + 3x?
+          </div>
+          <div class="mockup-quiz-card__options">
+            <div class="mockup-option">A. &nbsp;x + 3</div>
+            <div class="mockup-option mockup-option--correct">B. &nbsp;2x + 3 &nbsp;✓</div>
+            <div class="mockup-option">C. &nbsp;x² + 3</div>
+            <div class="mockup-option">D. &nbsp;2x</div>
+          </div>
+          <div class="mockup-quiz-card__footer">
+            <div class="mockup-progress-label">
+              <span>Question 3 of 10</span>
+              <span>30%</span>
+            </div>
+            <div class="mockup-progress-bar">
+              <div class="mockup-progress-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating AI card -->
+        <div class="mockup-ai-card">
+          <div class="mockup-ai-card__icon">🤖</div>
+          <div>
+            <div class="mockup-ai-card__title">AI Insight</div>
+            <div class="mockup-ai-card__text">Practice Derivatives — your weakest topic this week</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ STATS BAR ══════════════════════════ -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-bar__grid">
+      <div class="stats-bar__item">
+        <span class="stats-bar__number" id="stat-quizzes">0</span>
+        <span class="stats-bar__label">Quizzes Taken</span>
+      </div>
+      <div class="stats-bar__item">
+        <span class="stats-bar__number">&lt;3s</span>
+        <span class="stats-bar__label">Grading Time</span>
+      </div>
+      <div class="stats-bar__item">
+        <span class="stats-bar__number" id="stat-teachers">0</span>
+        <span class="stats-bar__label">Active Teachers</span>
+      </div>
+      <div class="stats-bar__item">
+        <span class="stats-bar__number" id="stat-satisfaction">0</span><span class="stats-bar__suffix">%</span>
+        <span class="stats-bar__label">Student Satisfaction</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FEATURES ═══════════════════════════ -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-header animate-fadeInUp">
+      <span class="section-header__tag">Everything You Need</span>
+      <h2 class="section-header__title">Built for Every Learner & Teacher</h2>
+      <p class="section-header__subtitle">From quiz creation to AI-powered insights — one powerful platform</p>
+    </div>
+    <div class="features__grid">
+      <div class="feature-card card--lift animate-fadeInUp delay-100">
+        <div class="feature-card__icon feature-card__icon--green">⚡</div>
+        <h3 class="feature-card__title">Instant Auto-Grading</h3>
+        <p class="feature-card__desc">Receive your score and detailed answer explanations the moment you hit submit. No waiting. Ever.</p>
+      </div>
+      <div class="feature-card card--lift animate-fadeInUp delay-200">
+        <div class="feature-card__icon feature-card__icon--purple">🤖</div>
+        <h3 class="feature-card__title">AI Study Advisor</h3>
+        <p class="feature-card__desc">Claude AI analyses your performance, identifies your weakest topics, and builds a personalised study plan just for you.</p>
+      </div>
+      <div class="feature-card card--lift animate-fadeInUp delay-300">
+        <div class="feature-card__icon feature-card__icon--amber">🏆</div>
+        <h3 class="feature-card__title">Leaderboards & Badges</h3>
+        <p class="feature-card__desc">Compete on class and global leaderboards. Earn badges for streaks, perfect scores, and subject mastery.</p>
+      </div>
+      <div class="feature-card card--lift animate-fadeInUp delay-100">
+        <div class="feature-card__icon feature-card__icon--blue">📊</div>
+        <h3 class="feature-card__title">Teacher Dashboard</h3>
+        <p class="feature-card__desc">Create quizzes with MCQ, True/False, and short-answer questions. Monitor class performance in real time.</p>
+      </div>
+      <div class="feature-card card--lift animate-fadeInUp delay-200">
+        <div class="feature-card__icon feature-card__icon--green">⏱️</div>
+        <h3 class="feature-card__title">Timed Exam Mode</h3>
+        <p class="feature-card__desc">Simulate real test conditions with countdown timers, auto-submit on expiry, and tab-switch detection.</p>
+      </div>
+      <div class="feature-card card--lift animate-fadeInUp delay-300">
+        <div class="feature-card__icon feature-card__icon--amber">📈</div>
+        <h3 class="feature-card__title">Progress Tracking</h3>
+        <p class="feature-card__desc">Visual charts show your score history, improvement trends, and subject-by-subject accuracy over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ HOW IT WORKS ═══════════════════════ -->
+<section class="how-it-works" id="how-it-works">
+  <div class="container">
+    <div class="section-header animate-fadeInUp">
+      <span class="section-header__tag" style="background:rgba(22,163,74,0.15); color: var(--clr-primary-400);">Simple Process</span>
+      <h2 class="section-header__title">Up and Running in Minutes</h2>
+      <p class="section-header__subtitle">No setup. No complexity. Just learning.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card animate-fadeInUp delay-100">
+        <div class="step-card__number">1</div>
+        <h3 class="step-card__title">Create Your Account</h3>
+        <p class="step-card__desc">Sign up as a student or teacher in 30 seconds. Choose your subjects and you're ready to go.</p>
+      </div>
+      <div class="step-card animate-fadeInUp delay-200">
+        <div class="step-card__number">2</div>
+        <h3 class="step-card__title">Take a Quiz</h3>
+        <p class="step-card__desc">Browse quizzes by subject, difficulty, or topic. Take them at your own pace or in timed exam mode.</p>
+      </div>
+      <div class="step-card animate-fadeInUp delay-300">
+        <div class="step-card__number">3</div>
+        <h3 class="step-card__title">Get AI Feedback</h3>
+        <p class="step-card__desc">Instant grade, detailed explanations, and an AI-generated study plan targeting your exact weak areas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ AI SPOTLIGHT ═══════════════════════ -->
+<section class="ai-spotlight" id="ai">
+  <div class="ai-spotlight__glow"></div>
+  <div class="container">
+    <div class="ai-spotlight__grid">
+      <div class="animate-fadeInUp">
+        <span class="section-header__tag ai-spotlight__tag">Powered by Claude AI</span>
+        <h2 class="ai-spotlight__title">
+          More Than a Quiz App.<br>
+          <span>Your Personal Tutor.</span>
+        </h2>
+        <div class="ai-spotlight__list">
+          <div class="ai-spotlight__item">
+            <div class="ai-spotlight__item-icon">🎯</div>
+            <div>
+              <div class="ai-spotlight__item-title">Weak Area Detection</div>
+              <div class="ai-spotlight__item-desc">Every wrong answer is mapped to its underlying topic. The AI flags where your accuracy consistently drops below threshold.</div>
+            </div>
+          </div>
+          <div class="ai-spotlight__item">
+            <div class="ai-spotlight__item-icon">🔄</div>
+            <div>
+              <div class="ai-spotlight__item-title">Adaptive Difficulty</div>
+              <div class="ai-spotlight__item-desc">Consistently scoring above 85%? Next recommendations get harder. Below 50%? The AI steps it back until you're ready.</div>
+            </div>
+          </div>
+          <div class="ai-spotlight__item">
+            <div class="ai-spotlight__item-icon">📅</div>
+            <div>
+              <div class="ai-spotlight__item-title">Personal Study Plans</div>
+              <div class="ai-spotlight__item-desc">Claude AI generates a prioritised, weekly study plan — exactly which topics to revisit, in what order, with what difficulty.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-spotlight__visual animate-fadeInUp delay-300">
+        <div class="ai-result-card">
+          <div class="ai-result-card__header">
+            <div class="ai-result-card__avatar">🎓</div>
+            <div>
+              <div class="ai-result-card__name">Ambe Blessing</div>
+              <div class="ai-result-card__role">Mathematics · Week 3</div>
+            </div>
+          </div>
+          <div class="ai-result-card__title">🤖 AI Performance Analysis</div>
+          <div class="ai-topic">
+            <span class="ai-topic__name">Derivatives & Calculus</span>
+            <span class="ai-topic__score">42% accuracy</span>
+          </div>
+          <div class="ai-topic__bar"><div class="ai-topic__fill" style="width:42%"></div></div>
+          <div class="ai-topic">
+            <span class="ai-topic__name">Quadratic Equations</span>
+            <span class="ai-topic__score">58% accuracy</span>
+          </div>
+          <div class="ai-topic__bar"><div class="ai-topic__fill" style="width:58%"></div></div>
+          <div class="ai-topic">
+            <span class="ai-topic__name">Linear Algebra</span>
+            <span class="ai-topic__score">88% accuracy</span>
+          </div>
+          <div class="ai-topic__bar"><div class="ai-topic__fill" style="width:88%; background: var(--clr-success)"></div></div>
+          <div class="ai-suggestion">
+            <span>💡</span>
+            <span class="ai-suggestion__text">Start with Derivatives Practice Set 3 — AI-recommended for your level</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ CTA ════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-section__content animate-fadeInUp">
+      <h2 class="cta-section__title">Ready to Study Smarter?</h2>
+      <p class="cta-section__subtitle">Join thousands of students already using AI to improve their grades.</p>
+      <div class="cta-section__actions">
+        <a href="/auth/register.html" class="btn btn--secondary btn--xl" style="background:#fff; color: var(--clr-primary-700); font-weight: var(--fw-bold);">
+          Create Free Account
+        </a>
+        <a href="/auth/login.html?role=teacher" class="btn btn--outline-white btn--xl">
+          Teacher Sign In
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FOOTER ═════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-name">QuizMaster<span style="color: var(--clr-primary-400)">Pro</span></div>
+        <p class="footer__brand-desc">The AI-powered learning platform that helps students identify weaknesses and improve faster.</p>
+      </div>
+      <div>
+        <div class="footer__col-title">Platform</div>
+        <div class="footer__links">
+          <a href="/auth/register.html" class="footer__link">For Students</a>
+          <a href="/auth/login.html?role=teacher" class="footer__link">For Teachers</a>
+          <a href="#features" class="footer__link">Features</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">DevOps Stack</div>
+        <div class="footer__links">
+          <a href="#" class="footer__link">Docker</a>
+          <a href="#" class="footer__link">Jenkins CI/CD</a>
+          <a href="#" class="footer__link">MongoDB Atlas</a>
+          <a href="#" class="footer__link">Railway Cloud</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Project</div>
+        <div class="footer__links">
+          <a href="#" class="footer__link">AMBE BLESSING SIRRI</a>
+          <a href="#" class="footer__link">CT25A421</a>
+          <a href="/api/health" class="footer__link">API Health ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 QuizMaster Pro · School Project · CT25A421</span>
+      <span>Built with Node.js · Docker · Jenkins · MongoDB Atlas · Claude AI</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('nav--scrolled', window.scrollY > 20);
+  });
+
+  // Animated counters
+  const counters = [
+    { el: document.getElementById('stat-quizzes'),      target: 10000, suffix: '+' },
+    { el: document.getElementById('stat-teachers'),     target: 500,   suffix: '+' },
+    { el: document.getElementById('stat-satisfaction'), target: 95,    suffix: ''  },
+  ];
+  const animateCounter = ({ el, target, suffix }) => {
+    if (!el) return;
+    let current = 0;
+    const step = target / 60;
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = (current >= target ? target : Math.floor(current)).toLocaleString() + suffix;
+      if (current >= target) clearInterval(timer);
+    }, 20);
+  };
+
+  // Intersection observer for counters
+  const statsBar = document.querySelector('.stats-bar');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        counters.forEach(animateCounter);
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+  if (statsBar) observer.observe(statsBar);
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
