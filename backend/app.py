@@ -56,12 +56,12 @@ def seed_data(app):
         # Create demo users
         def hp(p): return hashlib.sha256(p.encode()).hexdigest()
 
-        admin = User(username='admin', email='admin@quiz.com', password=hp('admin123'), role='admin', avatar='⚙️', total_points=0)
-        teacher = User(username='teacher1', email='teacher@quiz.com', password=hp('teacher123'), role='teacher', avatar='👨‍🏫', total_points=0)
-        student1 = User(username='student1', email='student1@quiz.com', password=hp('student123'), role='student', avatar='🎓', total_points=150, streak=3)
-        student2 = User(username='student2', email='student2@quiz.com', password=hp('student123'), role='student', avatar='🎓', total_points=80, streak=1)
+        admin = User(username='admin', email='admin@quiz.com', password=hp('admin123'), role='admin', avatar='A', total_points=0)
+        teacher = User(username='teacher1', email='teacher@quiz.com', password=hp('teacher123'), role='teacher', avatar='T', total_points=0)
+        student1 = User(username='student1', email='student1@quiz.com', password=hp('student123'), role='student', avatar='S', total_points=150, streak=3)
+        student2 = User(username='student2', email='student2@quiz.com', password=hp('student123'), role='student', avatar='S', total_points=80, streak=1)
 
-        student1.badges = json.dumps(['🔥 Hot Streak'])
+        student1.badges = json.dumps(['Hot Streak'])
         db.session.add_all([admin, teacher, student1, student2])
         db.session.flush()
 
