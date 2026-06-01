@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\HAREES COMPUTERS\\Desktop\\online-quiz-system\\logs\\.19adfb5fc97a6c2eecfb3a50c115b5cefa4e7630-audit.json",
+    "files": [
+        {
+            "date": 1779895517646,
+            "name": "C:\\Users\\HAREES COMPUTERS\\Desktop\\online-quiz-system\\logs\\error-2026-05-27.log",
+            "hash": "a1970816ed280409abffd143aca36a350c027254200927d713a64ca2214730b6"
+        }
+    ],
+    "hashType": "sha256"
+}
